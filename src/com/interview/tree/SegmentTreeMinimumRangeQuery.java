@@ -175,7 +175,7 @@ public class SegmentTreeMinimumRangeQuery {
 
         //total overlap condition
         if(startRange <= low && endRange >= high) {
-            segmentTree[pos] += delta;
+            segmentTree[pos] += (high-low+1)*delta;
             if(low != high) {
                 lazy[2*pos + 1] += delta;
                 lazy[2*pos + 2] += delta;
